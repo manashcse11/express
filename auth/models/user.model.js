@@ -1,6 +1,5 @@
 const sql = require("./db.js");
-const {saveErrorLog, NotFoundError, isEmptyObject} = require("../helpers/utility");
-const UserAddress = require("./user_address.model");
+const { NotFoundError } = require("../helpers/utility");
 
 // constructor
 const User = function(user) {

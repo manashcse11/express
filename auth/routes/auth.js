@@ -1,7 +1,7 @@
 const router = require('express').Router();
+const userController = require('../controllers/user.controller');
 
-router.post('/register', (req, res) => {
-    res.send('Reg');
-});
+// Register a new User
+router.post('/register', userController.register);
 
 module.exports = router;
