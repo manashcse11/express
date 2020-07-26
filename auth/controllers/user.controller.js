@@ -62,3 +62,8 @@ exports.login = async (req, res) => {
     }   
     
 };
+
+// Access auth users only
+exports.authuseronly = (req, res) => {
+    res.send("Hey,You are authenticated user. So you are authorized to access here.");
+};
