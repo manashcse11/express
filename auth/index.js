@@ -9,4 +9,5 @@ const authRoute = require('./routes/auth');
 // Route Middlewares
 app.use('/api/users', authRoute);
 
-app.listen(3005, () => console.log('Server is running'));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server is running on ${port}`));
