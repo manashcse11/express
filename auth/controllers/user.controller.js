@@ -67,3 +67,8 @@ exports.login = async (req, res) => {
 exports.authuseronly = (req, res) => {
     res.send("Hey,You are authenticated user. So you are authorized to access here.");
 };
+
+// Admin users only
+exports.adminonly = (req, res) => {
+    res.send("Success. Hellow Admin, this route is only for you");
+};

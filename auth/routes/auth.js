@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {loggedIn} = require("../helpers/auth.middleware");
+const {loggedIn, adminOnly} = require("../helpers/auth.middleware");
 const userController = require('../controllers/user.controller');
 
 // Register a new User
@@ -10,5 +10,8 @@ router.post('/login', userController.login);
 
 // Auth user only
 router.get('/authuseronly', loggedIn, userController.authuseronly);
+
+// Admin user only
+router.get('/adminonly', loggedIn, adminOnly, userController.adminonly);
 
 module.exports = router;

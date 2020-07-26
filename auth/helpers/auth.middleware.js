@@ -27,7 +27,7 @@ exports.loggedIn = function (req, res, next) {
 
 exports.adminOnly = async function (req, res, next) {
     if( req.user.user_type_id === 2 ){
-        return res.status(401).send("Access Denied");
+        return res.status(401).send("Unauthorized!");
     }  
     next();
 }
